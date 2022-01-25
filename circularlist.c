@@ -46,9 +46,9 @@ int main()
                         exit(1);
                  default:
                         printf("\nWrong choice\n");
-                }/*End of switch*/
-        }/*End of while*/
-}/*End of main()*/
+                }
+        }
+}
 
 void insert(int item)
 {
@@ -61,7 +61,7 @@ void insert(int item)
                 return;
         }
 
-        if( isEmpty() ) /*If queue is empty */
+        if( isEmpty() )
         {
                 rear=tmp;
                 tmp->link=rear;
@@ -72,7 +72,7 @@ void insert(int item)
                 rear->link=tmp;
                 rear=tmp;
         }
-}/*End of insert()*/
+}
 
 int del()
 {
@@ -83,7 +83,7 @@ int del()
                 printf("\nQueue underflow\n");
                 exit(1);
         }
-        if(rear->link==rear)  /*If only one element*/
+        if(rear->link==rear) 
         {
                 tmp=rear;
                 rear=NULL;
@@ -106,7 +106,7 @@ int peek()
                 exit(1);
         }
         return rear->link->info;
-}/* End of peek() */
+}
 
 int isEmpty()
 {
@@ -114,7 +114,7 @@ int isEmpty()
                 return 1;
         else
         return 0;
-}/*End of isEmpty()*/
+}
 
 
 void display()
